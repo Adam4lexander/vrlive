@@ -3,6 +3,7 @@ import axios from "axios";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./App";
+import "./components/all-components";
 import "./index.css";
 import logger from "./lib/log";
 
@@ -19,12 +20,12 @@ function loadScene(path: string, container: HTMLElement) {
     });
 }
 
-ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
-
 const editorDiv = document.getElementById("editor");
 if (editorDiv) {
   logger.info("Loading editor scene");
-  loadScene("./scenes/editor.html", editorDiv);
+  //loadScene("./scenes/editor.html", editorDiv);
 } else {
   logger.error("Couldn't find editor div");
 }
+
+ReactDOM.render(<App />, document.getElementById("overlay") as HTMLElement);

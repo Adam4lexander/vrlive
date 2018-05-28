@@ -5,9 +5,12 @@
   "dependencies": {
     "@types/winston": "^2.3.9",
     "aframe": "^0.8.2",
+    "aframe-htmltexture-component": "^0.2.1",
+    "aframe-state-component": "^3.4.0",
     "axios": "^0.18.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-monaco-editor": "^0.17.1",
     "winston": "^3.0.0-rc5"
   },
   "devDependencies": {
