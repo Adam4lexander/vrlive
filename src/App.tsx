@@ -8,11 +8,16 @@ class App extends React.Component<any, any> {
     this.state = {
       code: "// type your code..."
     };
+
+    window.focus = () => {
+      (this.refs.monaco as any).editor.focus();
+    };
   }
   public render() {
     return (
       <div style={{ textAlign: "left" }} className="App">
         <MonacoEditor
+          ref="monaco"
           language="javascript"
           theme="vs-dark"
           value={this.state.code}
