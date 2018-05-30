@@ -1,6 +1,6 @@
 import * as React from "react";
 import MonacoEditor from "react-monaco-editor";
-//import "./App.css";
+import logger from "./lib/log";
 
 class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -16,8 +16,8 @@ class App extends React.Component<any, any> {
           language="javascript"
           theme="vs-dark"
           value={this.state.code}
-          width="800"
-          height="600"
+          width="1024"
+          height="1024"
         />
       </div>
     );

@@ -14,6 +14,7 @@ function loadScene(path: string, container: HTMLElement) {
       logger.info("Attaching editor scene");
       const scene = response.data;
       container.innerHTML = scene;
+      ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
     })
     .catch(error => {
       logger.error(`Couldn't load scene: ${path}`);
@@ -23,9 +24,7 @@ function loadScene(path: string, container: HTMLElement) {
 const editorDiv = document.getElementById("editor");
 if (editorDiv) {
   logger.info("Loading editor scene");
-  //loadScene("./scenes/editor.html", editorDiv);
+  loadScene("./scenes/editor.html", editorDiv);
 } else {
   logger.error("Couldn't find editor div");
 }
-
-ReactDOM.render(<App />, document.getElementById("overlay") as HTMLElement);
