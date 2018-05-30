@@ -1,6 +1,6 @@
 import * as React from "react";
 import MonacoEditor from "react-monaco-editor";
-import "./App.css";
+//import "./App.css";
 
 class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -11,11 +11,13 @@ class App extends React.Component<any, any> {
   }
   public render() {
     return (
-      <div className="App">
+      <div style={{ textAlign: "left" }} className="App">
         <MonacoEditor
           language="javascript"
           theme="vs-dark"
           value={this.state.code}
+          width="800"
+          height="600"
         />
       </div>
     );
